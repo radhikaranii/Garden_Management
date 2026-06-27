@@ -26,7 +26,7 @@ function Login() {
   return (
     <main className="login-page">
       <section className="login-card">
-        <p className="login-tag">Garden Management</p>
+        <p className="login-tag">💐🌺🌷🌼Garden Management🌼🌷🌺💐</p>
         <h1>Welcome Back</h1>
         <p className="login-text">Enter your email and password to continue</p>
 
