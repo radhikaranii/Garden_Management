@@ -19,7 +19,8 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    alert(`Login clicked\nEmail: ${formData.email}\nPassword: ${formData.password}`
+    window.history.pushState({}, '', '/dashboard')
+    window.dispatchEvent(new PopStateEvent('popstate')
     )
   }
 

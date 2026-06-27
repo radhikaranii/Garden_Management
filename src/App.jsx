@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import Login from './pages/Login.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 import './App.css'
 
 const LOGIN_PATH = '/login'
+const DASHBOARD_PATH = '/dashboard'
 
 function App() {
   const [pathname, setPathname] = useState(window.location.pathname)
@@ -26,6 +28,10 @@ function App() {
 
   if (pathname === LOGIN_PATH) {
     return <Login />
+  }
+
+  if (pathname === DASHBOARD_PATH) {
+    return <Dashboard />
   }
 
   return null
