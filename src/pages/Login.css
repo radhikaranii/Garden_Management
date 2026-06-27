@@ -87,5 +87,5 @@
 
 .login-button:hover {
   background-color: #f7bfef;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
