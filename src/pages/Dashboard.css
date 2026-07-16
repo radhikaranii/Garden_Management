@@ -1,11 +1,10 @@
 .dashboard-page {
   min-height: 100vh;
   padding: 24px;
-  background:
-    radial-gradient(circle at top left, rgba(185, 210, 170, 0.38), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(218, 196, 150, 0.24), transparent 30%),
-    linear-gradient(180deg, #f7f2e8 0%, #efe3cf 100%);
-  color: #4f3b24;
+ background: url("../assets/dashboardpage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .dashboard-shell {

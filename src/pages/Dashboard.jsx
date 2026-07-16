@@ -1,4 +1,5 @@
 import './Dashboard.css'
+import Navbar from './pages/top-navbar'
 
 function Dashboard() {
   const alerts = [
