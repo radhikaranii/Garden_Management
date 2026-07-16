@@ -1,32 +1,14 @@
-import { NavLink, useNavigate } from 'react-router-dom'
 import './top-navbar.css'
 
-function Navbar({ onLogout }){
-    const navigate = useNavigate()
-    
-    const handleLogout = () => {
-        onLogout()
-        navigate('/login')
-    }
-
-    return(
-      <nav className ="navbar">
-        <div className ="navbar-brand">
-            <span className="navbar-logo"> Garden Management</span>
+function Navbar({ title = 'Garden Management', actions = null }) {
+  return (
+    <nav className="navbar" aria-label="Garden navigation">
+      <div className="navbar-brand">
+        <span className="navbar-logo">{title}</span>
       </div>
-
-      <u1 className="navbar-links">
-        <li><NavLink to="/dashboard" end>Home</NavLink></li>
-
-
-
-
-        </u1>
-    )
-
-
-
-
-
-
+      {actions ? <div className="navbar-actions">{actions}</div> : null}
+    </nav>
+  )
 }
+
+export default Navbar

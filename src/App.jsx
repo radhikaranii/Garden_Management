@@ -5,18 +5,25 @@ import './App.css'
 
 const LOGIN_PATH = '/login'
 const DASHBOARD_PATH = '/dashboard'
+const VALID_PATHS = new Set([LOGIN_PATH, DASHBOARD_PATH])
+
+function getCurrentPathname() {
+  const { pathname } = window.location
+
+  if (VALID_PATHS.has(pathname)) {
+    return pathname
+  }
+
+  window.history.replaceState({}, '', LOGIN_PATH)
+  return LOGIN_PATH
+}
 
 function App() {
-  const [pathname, setPathname] = useState(window.location.pathname)
+  const [pathname, setPathname] = useState(getCurrentPathname)
 
   useEffect(() => {
-    if (window.location.pathname !== LOGIN_PATH) {
-      window.history.replaceState({}, '', LOGIN_PATH)
-      setPathname(LOGIN_PATH)
-    }
-
     const handleLocationChange = () => {
-      setPathname(window.location.pathname)
+      setPathname(getCurrentPathname())
     }
 
     window.addEventListener('popstate', handleLocationChange)
