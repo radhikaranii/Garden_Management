@@ -1,4 +1,5 @@
 import './Dashboard.css'
+import Navbar from '../components/top-navbar'
 
 function Dashboard() {
   const alerts = [
@@ -39,9 +40,11 @@ function Dashboard() {
   return (
     <main className="dashboard-page">
       <section className="dashboard-shell">
+        <Navbar />
+
         <header className="dashboard-header">
           <div>
-            <p className="dashboard-kicker">Garden Management</p>
+            {/* <p className="dashboard-kicker">Garden Management</p> */}
             <h1>Radhika&apos;s Home</h1>
             <p className="dashboard-subtitle">
               A simple overview of weather, plants, alerts, and care notes.
