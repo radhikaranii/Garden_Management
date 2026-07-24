@@ -10,7 +10,7 @@ function Navbar({ title = 'Garden Management', actions = null }) {
       <div className="navbar-links">
         <a href="/dashboard" className="navbar-link">Home</a>
         <a href="/plants" className="navbar-link">Plants</a>
-        <a href="#alerts" className="navbar-link">Alerts</a>
+        <a href="/alerts" className="navbar-link">Alerts</a>
         <a href="#resources" className="navbar-link">Resources</a>
       </div>
 
