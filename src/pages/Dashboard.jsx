@@ -1,5 +1,7 @@
 import './Dashboard.css'
 import Navbar from '../components/top-navbar'
+import { useState } from 'react'
+import AddPlantModal from '../components/AddPlantModal'
 
 function Dashboard() {
   const alerts = [
@@ -16,6 +18,8 @@ function Dashboard() {
       text: 'Top beds are drying faster than usual.',
     },
   ]
+
+  const [isAddPlantOpen, setIsAddPlantOpen] = useState(false)
 
   const activePlants = [
     { name: 'Tomatoes', status: 'Fruiting', stage: 'Week 6' },
@@ -51,7 +55,7 @@ function Dashboard() {
             </p>
           </div>
 
-          <button className="dashboard-primary-button" type="button">
+          <button className="dashboard-primary-button" type="button" onClick={() => setIsAddPlantOpen(true)}>
             + Add Plant
           </button>
         </header>
@@ -167,6 +171,10 @@ function Dashboard() {
           </section>
         </section>
       </section>
+
+      {isAddPlantOpen ? (
+        <AddPlantModal onClose={() => setIsAddPlantOpen(false)} />
+      ) : null}
     </main>
   )
 }

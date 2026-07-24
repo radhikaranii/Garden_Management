@@ -1,0 +1,44 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(40, 30, 20, 0.45);
+}
+
+.plant-modal {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
