@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import Plants from './pages/Plants.jsx'
 import './App.css'
 
 const LOGIN_PATH = '/login'
 const DASHBOARD_PATH = '/dashboard'
-const VALID_PATHS = new Set([LOGIN_PATH, DASHBOARD_PATH])
+const PLANTS_PATH = '/plants'
+const VALID_PATHS = new Set([LOGIN_PATH, DASHBOARD_PATH, PLANTS_PATH])
 
 function getCurrentPathname() {
   const { pathname } = window.location
@@ -39,6 +41,10 @@ function App() {
 
   if (pathname === DASHBOARD_PATH) {
     return <Dashboard />
+  }
+
+  if (pathname === PLANTS_PATH) {
+    return <Plants />
   }
 
   return null
